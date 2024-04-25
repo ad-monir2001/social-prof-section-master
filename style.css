@@ -9,3 +9,169 @@
   --Very-Dark-Magenta: hsl(300, 43%, 22%);
   --Soft-Pink: hsl(333, 80%, 67%);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/bg-pattern-top-desktop.svg) ,url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat , no-repeat;
+}
+
+.container {
+  margin: 6rem;
+  max-width: 1440px;
+}
+
+.flex {
+  display: flex;
+}
+
+.hero {
+  justify-content: space-between;
+}
+
+.hero__left {
+  max-width: 400px;
+}
+
+.hero__left h1 {
+  font-size: 2rem;
+  color: var(--Very-Dark-Magenta);
+}
+
+.hero__left p {
+  color: var(--Dark-Grayish-Magenta);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.hero__right {
+  position: relative;
+}
+
+.hero__right .review:nth-child(1) {
+  position: relative;
+  left: -93px;
+}
+
+.hero__right .review:nth-child(2) {
+  position: relative;
+  left: -48px;
+}
+
+.hero__right .review:nth-child(3) {
+  position: relative;
+}
+
+.hero__right .review {
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--Light-Grayish-Magenta);
+  margin: 1rem 0;
+  padding: 0.9rem;
+  border-radius: 8px;
+}
+
+.hero__right .review img {
+  width: 13px;
+  margin-left: 5px;
+}
+
+.hero__right .review h4 {
+  color: var(--Very-Dark-Magenta);
+}
+
+.customer__review {
+  margin: 2rem 0;
+  position: relative;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card:nth-child(2) {
+  position: relative;
+  top: 20px;
+}
+
+.card:nth-child(3) {
+  position: relative;
+  top: 40px;
+}
+
+.card {
+  background-color: var(--Very-Dark-Magenta);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 330px;
+}
+
+.card__profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.card__profile {
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile__title .name {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.profile__title .tag {
+  color: var(--Soft-Pink);
+}
+
+.card > p {
+  color: white;
+  margin-top: 1rem;
+  line-height: 1.2rem;
+}
+
+/** Break points **/
+
+@media screen and (max-width: 375px) {
+  .hero {
+    display: inline;
+    text-align: center;
+  }
+
+  .hero__left {
+    max-width: 375px;
+  }
+  
+  .hero__left h1 {
+    font-size: 3rem;
+  }
+  
+  .hero__right {
+    position: static;
+  }
+
+  .review {
+    display: block;
+  }
+
+  .hero__right .review:nth-child(1),
+  .hero__right .review:nth-child(2),
+  .hero__right .review:nth-child(3) {
+    position: static;
+  }
+
+  .customer__review {
+    display: inline;
+  }
+
+ 
+}

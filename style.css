@@ -21,8 +21,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(./images/bg-pattern-top-desktop.svg) ,url(./images/bg-pattern-bottom-desktop.svg);
-  background-repeat: no-repeat , no-repeat;
+  background: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
 }
 
 .container {
@@ -142,19 +143,20 @@ body {
 /** Break points **/
 
 @media screen and (max-width: 375px) {
+  body {
+    background: url(./images/bg-pattern-top-mobile.svg),
+      url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+  }
+
   .hero {
     display: inline;
     text-align: center;
   }
+  .container {
+    margin: 3rem 1rem;
+  }
 
-  .hero__left {
-    max-width: 375px;
-  }
-  
-  .hero__left h1 {
-    font-size: 3rem;
-  }
-  
   .hero__right {
     position: static;
   }
@@ -172,6 +174,4 @@ body {
   .customer__review {
     display: inline;
   }
-
- 
 }
